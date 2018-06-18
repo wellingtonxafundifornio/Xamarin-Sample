@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HelloXamarin"
+             x:Class="HelloXamarin.MainPage">
+
+    <StackLayout>
+        <Button Text="Tirar Foto" Clicked="TirarFoto" FontSize="20" />
+
+        <Button Text="Escolher Foto" Clicked="EscolherFoto" FontSize="20" />
+
+        <Button Text="Gravar Video" Clicked="GravarVideo" FontSize="20" />
+
+        <Button Text="Escolher Video" Clicked="EscolherVideo" FontSize="20" />
+
+        <Image x:Name="MinhaImagem" />
+        
+        <!-- Get location sample -->
+        <Button Text="Localização" Clicked="GetPosition" BackgroundColor="#EEE"  />
+        
+        <Label Text="Latitude" FontSize="20" HorizontalOptions="CenterAndExpand" />
+        
+        <Label x:Name="LatitudeLabel" FontSize="30" HorizontalOptions="CenterAndExpand" />
+        
+        <Label Text="Longitude" FontSize="20" HorizontalOptions="CenterAndExpand" />
+        
+        <Label x:Name="LongitudeLabel" FontSize="30" HorizontalOptions="CenterAndExpand" />
+        
+    </StackLayout>
+
+</ContentPage>
