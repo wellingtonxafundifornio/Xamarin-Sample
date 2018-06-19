@@ -51,5 +51,12 @@
     <key>NSLocationWhenInUseUsageDescription</key>
     <string>Esse aplicativo precisa acessar a sua localização.</string>
 	
+	<key>NSLocationUsageDescription</key>
+    <string>Esse aplicativo precisa acessar a sua localização.</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Esse aplicativo precisa acessar a sua localização.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Esse aplicativo precisa acessar a sua localização.</string>
+	
 </dict>
 </plist>

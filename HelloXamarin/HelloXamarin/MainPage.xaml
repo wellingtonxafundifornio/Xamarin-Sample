@@ -14,18 +14,9 @@
         <Button Text="Escolher Video" Clicked="EscolherVideo" FontSize="20" />
 
         <Image x:Name="MinhaImagem" />
-        
-        <!-- Get location sample -->
-        <Button Text="Localização" Clicked="GetPosition" BackgroundColor="#EEE"  />
-        
-        <Label Text="Latitude" FontSize="20" HorizontalOptions="CenterAndExpand" />
-        
-        <Label x:Name="LatitudeLabel" FontSize="30" HorizontalOptions="CenterAndExpand" />
-        
-        <Label Text="Longitude" FontSize="20" HorizontalOptions="CenterAndExpand" />
-        
-        <Label x:Name="LongitudeLabel" FontSize="30" HorizontalOptions="CenterAndExpand" />
-        
+
+        <Button Text="Acessar Mapa" Clicked="OpenMaps" FontSize="20" />
+
     </StackLayout>
 
 </ContentPage>

@@ -12,10 +12,14 @@ namespace HelloXamarin
 {
 	public partial class MainPage : ContentPage
 	{
+        private double Latitude = 0;
+        private double Longitude = 0;
+
 		public MainPage()
 		{
-			InitializeComponent();
-		}
+            GetPosition();
+            InitializeComponent();
+        }
 
         private async void TirarFoto(object sender, EventArgs e)
         {
@@ -128,22 +132,19 @@ namespace HelloXamarin
             });
         }
 
-        private async void GetPosition(object sender, EventArgs e)
+        private async void GetPosition()
         {
-            var locator = CrossGeolocator.Current;
-            locator.DesiredAccuracy = 50;
+                var locator = CrossGeolocator.Current;
+                locator.DesiredAccuracy = 50;
 
-            try
-            {
                 var position = await locator.GetPositionAsync(TimeSpan.FromSeconds(10));
-                LongitudeLabel.Text = string.Format("{0:0.0000000}", position.Longitude);
-                LatitudeLabel.Text = string.Format("{0:0.0000000}", position.Latitude);
-            }
-            catch (Exception ex)
-            {
-                string msg = ex.Message;
-            }
-            
+                this.Latitude = position.Latitude;
+                this.Longitude = position.Longitude;
+        }
+
+        private async void OpenMaps(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Mapa(this.Latitude, this.Longitude), true);
         }
     }
 }
